@@ -1,0 +1,5 @@
+
+
+#Ignora todos los archivos de texto
+*.txt
+*"bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.css">
