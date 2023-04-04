@@ -1,0 +1,209 @@
+* {
+    font-family: Helvetica, sans-serif ;
+    margin: auto;
+    @mixin margins($margin-top,$margin-bottom, $margin-left, $margin-right){
+        margin-top: $margin-top;
+        margin-bottom: $margin-bottom;
+        margin-left: $margin-left;
+        margin-right: $margin-right;
+    }
+    $costado : inline-block;
+/*titulo*/
+h1{ 
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 5px 5px 5px black;
+    font-weight: bold;  
+}
+/*subtitulo*/
+.subtitulo{ 
+    color:#fff;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+.articulo1{
+    background-image: url("../img/background.jpg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height:250px;
+    position: absolute;
+    top:10%;
+    padding-top:5%;
+    z-index:2;
+}
+
+.menuu{
+    position: fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    height: 10%;
+    border: solid 1px;
+    background-color: white;
+    z-index: 3;
+}
+.logo{
+    position: absolute;
+    height: 100%;
+    left: 5%;
+}
+.navbarr{
+    position: absolute;
+    right: 0%;
+    width: 70%;
+}
+.orgseccion{
+    margin-top:400px;
+    background-color: white;
+}
+.seccion2img{
+    margin-bottom: 3%;
+}
+
+.seccion2parrafo{
+    margin-bottom: 3%;
+}
+
+.seccion3{
+    width: 100%;
+    height: auto;
+    @include margins(0%,0%, 2.5%, 2.5%);
+}
+.seccion4{
+    background-color:#000;
+    width: 100%;
+    color:white;
+    height: auto;
+    z-index:999;
+    padding:5%;
+    margin:0%;
+    display: $costado;
+}
+.flex-container{
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.footersection{
+    display:flex;
+    margin: 0%;
+}
+.footersection a{
+    color:gainsboro;
+}
+.divformulario{
+    width:60%;
+    @include margins(5%, 5%, 20%, 20%);
+}
+input{
+    width: 100%;
+    padding: 1%;
+}
+
+.button{
+    background: black;
+    color: white;
+    padding: 2%;
+}
+
+h3{
+    text-align: center;
+}
+
+.limenu a{
+    color: gray;
+}
+a{
+    text-decoration: none;
+}
+.animation {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 0;
+    position: relative;
+    left: 45%;
+    transform: translateX(-25%);
+    animation: jump 1s ease-in-out infinite;
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-80px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+    
+/*sobre nosotros*/
+
+.nosotros{
+    background-image: url("../img/2.jpeg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height:30%;
+    position: absolute;
+    z-index: 100;
+    top:10%;
+    padding-top:5%;
+    z-index:2;}
+
+
+    /*servicios*/
+
+    .servicios{
+        background-image: url("../img/3.jpeg");
+        background-position: 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height:30%;
+        position: absolute;
+        z-index: 100;
+        top:10%;
+        padding-top:5%;
+        z-index:2;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .limenu {
+          font-size: 15px;
+          color: #000;
+          display: $costado;
+            margin:1.5%;
+        }
+        .menuu{
+            height: 60px;
+        }
+        .navbarr{
+            left: 10%;
+            top: 15%;
+            width: 100%;
+        }
+        input{
+            display: block;
+        }
+      }
+      @media only screen and (min-width: 700px) {
+        .limenu{
+            display: $costado;
+            margin:1.5%;
+            font-size: 20px;
+            vertical-align: center;
+        }
+        input{
+            display: $costado;
+        }
+      }
+    }
